@@ -1,0 +1,39 @@
+<ion-view view-title="Reorder Request">
+    <ion-nav-bar class="bar-calm">
+        <ion-nav-back-button>back</ion-nav-back-button>
+    </ion-nav-bar>
+        
+    <ion-content class="padding">
+        <div class="row">
+            <div class="col col-25">
+                <img src="img/prod-06.png">
+            </div>
+            <div class="col">
+                <h2>Company Branding</h2>
+                <p>Logo, letterhead, envelopes, color scheme</p>
+            </div>
+        </div>
+        
+        <!--
+        <div class="list card">
+            <div class="item item-divider">Reorder Request</div>
+            <div class="item item-body">
+                A request for the reordering of this product will be sent to the sales team.
+            </div>
+        </div>
+        -->
+        <div class="list card">
+            <div class="item item-divider">Reorder request will be sent. Please Type in the details</div>
+            <div class="item item-body">
+            <label class="item item-input item-stacked-label" name="ReordRemark">
+                <span class="input-label">Remarks</span>
+                <textarea rows="5"></textarea>
+            </label>
+            </div>
+        </div>
+        
+        <div class="padding" align="right" ng-controller="PopupCtrl">
+            <a class="button button-positive button-clear" ng-click="showAlert(reordRequestAlert)">SUBMIT</a>
+        </div>
+    </ion-content>
+</ion-view>

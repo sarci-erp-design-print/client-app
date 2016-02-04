@@ -1,0 +1,31 @@
+<ion-view view-title="Login">
+    <ion-content>
+        <div class="login_bkgrnd">
+            <div class="spacer" style="height: 100px;"></div>
+
+            <div class="list list-inset">
+                <label class="item item-input item-stacked-label" name="Mobile">
+                    <span class="input-label">Mobile</span>
+                    <input type="tel" placeholder="000-000-0000">
+                </label>
+                <label class="item item-input item-stacked-label" name="Password">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="********">
+                </label>
+            </div>
+            <div class="spacer" style="height: 50px;"></div>
+
+            <div class="padding" ng-controller="DatatestCtrl">
+                <a href="#/home/catalogue" class="button button-block button-positive" ng-click="testDB()">Sign In</a>
+            </div>
+            <div class="padding" ng-controller="PopupCtrl">
+                <button class="button button-block button-light button-clear" ng-click="showPopup()">forgot password...</button>
+            </div>
+            <div class="spacer" style="height: 50px;"></div>
+
+            <div style="margin: 0 auto; width:100px">
+                <img src="img/scpl-logo.jpg" style="mix-blend-mode: multiply;">
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

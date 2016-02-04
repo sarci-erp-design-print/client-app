@@ -1,0 +1,38 @@
+<ion-view view-title="Order Request">
+    <ion-nav-bar class="bar-calm">
+        <ion-nav-back-button>back</ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content class="padding">
+        <div class="row">
+            <div class="col col-25">
+                <img src="img/prod-06.png">
+            </div>
+            <div class="col">
+                <h2>Business Card</h2>
+                <p>Standout striking</p>
+            </div>
+        </div>
+
+        <div ng-controller="OtherCtrl">
+            <ion-radio ng-model="orderType" value="DP">Design &amp; print</ion-radio>
+            <ion-radio ng-model="orderType" value="P">Only print, I'll give the design</ion-radio>
+            <ion-radio ng-model="orderType" value="D">Only design</ion-radio>
+        </div>
+        <div class="list card">
+            <label class="item item-input item-stacked-label" name="ProjName">
+                <span class="input-label">Project Name</span>
+                <input type="text">
+            </label>
+            <label class="item item-input item-stacked-label" name="ProjDesc">
+                <span class="input-label">Description</span>
+                <textarea rows="5"></textarea>
+            </label>
+        </div>
+
+        <div class="padding" align="right" ng-controller="PopupCtrl">
+            <a class="button button-positive button-clear" ng-click="showAlert(ordRequestAlert)">SUBMIT</a>
+        </div>
+
+    </ion-content>
+</ion-view>

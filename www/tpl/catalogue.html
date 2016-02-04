@@ -1,0 +1,115 @@
+<ion-view>
+    <ion-nav-bar class="bar-calm" ng-controller="SearchCtrl">
+        <ion-nav-buttons side="left">
+            <button menu-toggle="left" 
+                class="button button-icon button-clear ion-navicon">
+            </button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="primary">
+            <div class="bar bar-header bar-calm item-input-inset" ng-show="showSearch">
+                <span class="item-input-wrapper textbox-search">
+                    <i class="icon ion-ios-search placeholder-icon"></i>
+                    <input type="search" placeholder="Search" ng-model="searchText">
+                    <button ng-click="searchText=''" class="icon button-clear ion-android-close"></button>
+                </span>
+            </div>        
+        </ion-nav-buttons>
+        <ion-nav-title ng-show="!showSearch">
+            Catalogue
+        </ion-nav-title>
+        <ion-nav-buttons side="right">
+            <button ng-click="showSearch=!showSearch"
+                class="button button-icon button-clear ion-android-search">
+            </button>
+            <button menu-toggle="right" 
+                class="button button-icon button-clear ion-android-textsms">
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-content>
+        <div class="row">
+            <div class="col">
+                <a class="item item-text-wrap" style="height: 220px" href="#/home/request">
+                    <div align="center"><img src="img/prod-06.png"></div>
+                    <div>
+                        <h2>Business Card</h2>
+                        <p>Standout striking</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a class="item item-text-wrap" style="height: 220px" href="#/home/request">
+                    <div align="center"><img src="img/prod-04.png"></div>
+                    <div>
+                        <h2>Flyer</h2>
+                        <p>Handout something round</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a class="item item-text-wrap" style="height: 220px" href="#/home/request">
+                    <div align="center"><img src="img/prod-05.png"></div>
+                    <div>
+                        <h2>Postcard</h2>
+                        <p>Promotion, Invitation, Porfolio, Friendly note</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a class="item item-text-wrap" style="height: 220px" href="#/home/request">
+                    <div align="center"><img src="img/prod-07.png"></div>
+                    <div>
+                        <h2>Letterhead</h2>
+                        <p>Saying something about who you are</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a class="item item-text-wrap" style="height: 220px" href="#/home/request">
+                    <div align="center"><img src="img/prod-08.png"></div>
+                    <div>
+                        <h2>Sticker</h2>
+                        <p>Add Pop &amp; Stickiness to your promotions</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a class="item item-text-wrap" style="height: 220px" href="#/home/request">
+                    <div align="center"><img src="img/prod-06.png"></div>
+                    <div>
+                        <h2>Company Branding</h2>
+                        <p>Logo, letterhead, envelopes, color scheme</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a class="item item-text-wrap" style="height: 220px" href="#/home/request">
+                    <div align="center"><img src="img/prod-04.png"></div>
+                    <div>
+                        <h2>Gift Set</h2>
+                        <p>Writting Pad, calender, diary</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+            
+<!--
+            <ion-list>
+                    <ion-item class="item-thumbnail-left" href="#/home/request">
+                        <img src="img/prod-04.png">
+                        <h2>Gift Set</h2>
+                        <p>Writting Pad, calender, diary</p>
+                    </ion-item>
+            </ion-list>
+-->
+    </ion-content>
+</ion-view>

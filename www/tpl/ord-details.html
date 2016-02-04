@@ -1,0 +1,98 @@
+<ion-view view-title="Order Details">
+    <ion-nav-bar class="bar-calm" ng-controller="DropmenuCtrl">
+        <ion-nav-back-button>back</ion-nav-back-button>
+        <ion-nav-buttons side="right">
+            <button ng-click="showMenu($event)" 
+                class="button button-icon button-clear ion-android-more-vertical">
+            </button>
+        </ion-nav-buttons>        
+    </ion-nav-bar>
+    
+    <ion-content class="padding" ng-controller="CollapsableCtrl">
+        <div class="row">
+            <div class="col col-25">
+                <img src="img/prod-06.png">
+            </div>
+            <div class="col">
+                <h2>Company Branding</h2>
+                <p>Logo, letterhead, envelopes, color scheme</p>
+            </div>
+        </div>
+        <!--
+        <div align="right" class="buttons">
+            <a href="#/home/reorder" class="button button-icon ion-ios-plus-outline">
+            </a>
+            <a href="#/home/modify" class="button button-icon ion-ios-compose-outline">
+            </a>
+        </div>
+        -->
+        <ion-list>
+            <ion-item class="item-divider item-stable">Status</ion-item>
+            <ion-item>
+                <h3><strong>Production completed</strong></h3>
+                <p>Delivery on <strong>22 Feb 2016</strong></p>
+            </ion-item>
+            <div class="spacer" style="height: 10px;"></div>
+            
+            <div ng-repeat="group in groups">
+                <ion-item class="item-divider item-stable"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+                    <i class="icon" ng-class="isGroupShown(group) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+                    &nbsp;
+                    <span ng-bind="group.name"></span>
+                </ion-item>
+                <ion-item class="item-accordion"
+                    ng-repeat="item in group.items"
+                    ng-show="isGroupShown(group)">
+                    <span ng-bind-html="item"></span>
+                </ion-item>
+                <div class="spacer" style="height: 10px;"></div>
+            </div>
+        </ion-list>
+        
+        <!--
+        <ion-list>
+            <ion-item class="item-divider">Status</ion-item>
+            <ion-item>
+                <h3><strong>Production completed</strong></h3>
+                <p>Delivery on <strong>22 Feb 2016</strong></p>
+            </ion-item>
+            
+            <ion-item class="item-divider">Ordered Items</ion-item>
+            <ion-item>
+                <div class="row">
+                    <div class="col col-75">Letterhead</div>
+                    <div class="col"><strong>500</strong></div>
+                </div>
+                <div class="row">
+                    <div class="col col-75">Envelope</div>
+                    <div class="col"><strong>500</strong></div>
+                </div>
+                <div class="row">
+                    <div class="col col-75">Rubber Stamp</div>
+                    <div class="col"><strong>3</strong></div>
+                </div>
+            </ion-item>
+
+            <ion-item class="item-divider">Specifications</ion-item>
+            <ion-item>
+                Envelope size C4<br>
+                Rubber Stamp in circle, square and rectangle shape 
+            </ion-item>
+            
+            <ion-item class="item-divider">Payment</ion-item>
+            <ion-item>
+                Order# 2345 Invoice# 5544 for Rs.1500 paid<br>
+                Order# 2345 Invoice# 5634 for Rs.1000 not paid
+            </ion-item>
+            
+            <ion-item class="item-divider">Delivery</ion-item>
+            <ion-item>
+                Challan# 66555 issued on 02 Feb 2016<br>
+                Despatched through DHT Consignment# DCV9876
+            </ion-item>
+        </ion-list>
+        -->
+    </ion-content>
+</ion-view>
